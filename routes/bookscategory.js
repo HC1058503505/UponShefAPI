@@ -4,7 +4,7 @@ const mongoClient = require('mongodb').MongoClient
 const dbURL = 'mongodb://localhost:27017'
 
 router.get('/',function(req, res){
-	mongoClient.connect(dbURL, function(error, db){
+	mongoClient.connect(dbURL,{useNewUrlParser:true}, function(error, db){
 		const meals = db.db('books')
 		const caipu_list = meals.collection('bookscategory')
 

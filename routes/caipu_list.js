@@ -4,7 +4,7 @@ const mongoClient = require('mongodb').MongoClient
 const dbURL = 'mongodb://localhost:27017'
 
 router.get('/:caipu',function (req, res) {
-	mongoClient.connect(dbURL, function(error, db){
+	mongoClient.connect(dbURL, {useNewUrlParser:true},function(error, db){
 		const meals = db.db('meals')
 		const caipu_type = req.params.caipu
 		const caipu_list = meals.collection(caipu_type)
@@ -18,7 +18,7 @@ router.get('/:caipu',function (req, res) {
 })
 
 router.get('/:caipu/page/:page',function (req, res) {
-	mongoClient.connect(dbURL, function(error, db){
+	mongoClient.connect(dbURL, {useNewUrlParser:true},function(error, db){
 		const meals = db.db('meals')
 		const caipu_type = req.params.caipu
 		const page = req.params.page
@@ -34,7 +34,7 @@ router.get('/:caipu/page/:page',function (req, res) {
 
 
 router.get('/:caipu/identifier/:caipu_id',function (req, res) {
-	mongoClient.connect(dbURL, function (error, db) {
+	mongoClient.connect(dbURL, {useNewUrlParser:true},function (error, db) {
 		const meals = db.db('meals')
 		const caipu_type = req.params.caipu + '_steps'
 		const caipu_id = req.params.caipu_id

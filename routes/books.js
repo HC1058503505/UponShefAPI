@@ -5,7 +5,7 @@ const dbURL = 'mongodb://localhost:27017'
 
 
 router.get('/list',function(req, res){
-	mongoClient.connect(dbURL, function(error, db){
+	mongoClient.connect(dbURL, {useNewUrlParser:true},function(error, db){
 		const meals = db.db('books')
 		const caipu_list = meals.collection('guwen')
 
@@ -19,7 +19,7 @@ router.get('/list',function(req, res){
 
 
 router.get('/book_id/:book_id',function(req, res){
-	mongoClient.connect(dbURL, function(error, db){
+	mongoClient.connect(dbURL, {useNewUrlParser:true},function(error, db){
 		const meals = db.db('books')
 		const caipu_list = meals.collection('guwen')
 		// console.log(req.params.book_id)

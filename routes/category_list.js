@@ -4,7 +4,7 @@ const mongoClient = require('mongodb').MongoClient
 const dbURL = "mongodb://localhost:27017"
 
 router.get('/',function(req, res) {
-	mongoClient.connect(dbURL, function (error, db) {
+	mongoClient.connect(dbURL, {useNewUrlParser:true},function (error, db) {
 		const meals = db.db('meals')
 		const category_list = meals.collection('category_list')
 		category_list.find({}).toArray(function(error, docs) {
@@ -16,7 +16,7 @@ router.get('/',function(req, res) {
 })
 
 router.get('/:category_type', function (req, res) {	
-	mongoClient.connect(dbURL, function (error, db) {
+	mongoClient.connect(dbURL, {useNewUrlParser:true},function (error, db) {
 		const meals = db.db('meals')
 		const category_list = meals.collection('category_list')
 		const category_type = req.params.category_type
