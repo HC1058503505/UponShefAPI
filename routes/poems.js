@@ -71,7 +71,7 @@ router.get('/tag/:poem_tags/:page',function(req, res){
 
 router.get('/author/:poem_author/:page',function(req, res){
 	var query = {
-		'poem_author' : req.params.poem_author + ' '
+		'poem_author' : req.params.poem_author
 	}
 	responseAction("poem",query, req, res,parseInt(req.params.page), 6)
 })

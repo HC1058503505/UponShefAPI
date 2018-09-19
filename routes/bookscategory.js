@@ -36,3 +36,26 @@ module.exports = router
 // 											  					}
 // 											}
 // 								}])
+
+
+
+
+
+
+
+// caipu_list.aggregate([{
+// 								'$group' : {
+// 											  '_id' : '$book_category',
+// 											  'sub_category' : {
+
+// 											  					    '$push' : {
+// 											  					    	  		'book_section' : '$book_sub_category',
+// 											  									'book_items' : '$book_items'
+// 											  								}
+// 											  					}
+// 											}
+// 								}]).toArray(function(error, docs){
+// 									res.send(docs)
+// 									res.end()
+// 									db.close()
+// 								})
