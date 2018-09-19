@@ -20,6 +20,7 @@ app.set('view engine', 'ejs') // 设置模板引擎 ejs
 //静态文件目录，
 app.use('/file',express.static(path.join(__dirname,'public')));
 
+// 菜谱
 app.use('/',indexRouter)
 app.use('/users',userRouter)
 

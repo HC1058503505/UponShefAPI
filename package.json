@@ -1,7 +1,7 @@
 {
-  "name": "myblog",
+  "name": "API",
   "version": "1.0.0",
-  "description": "my first blog Node.js",
+  "description": "My First API",
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js"
@@ -25,5 +25,9 @@
     "sha1": "^1.1.1",
     "supervisor": "^0.12.0",
     "winston": "^3.0.0"
+  },
+  "apidoc": {  
+    "title": "接口文档", 
+    "url": "http://localhost:3000"
   }
 }
