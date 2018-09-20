@@ -5,7 +5,7 @@ const dbURL = 'mongodb://localhost:27017'
 
 /**
  * @api {get} /bookscategory 古书类别列表
- * @apiSampleRequest http://localhost:3000/bookscategory
+ * @apiSampleRequest http://180.76.181.15:3000/bookscategory
  * @apiDescription 古书类别列表
  * @apiName 古书类别列表
  * @apiGroup Books

@@ -31,7 +31,7 @@ function responseAction(collectionName,query,project,req, res, skipnum,limitnum)
 
 /**
  * @api {get} /books/:page 分页古书籍列表
- * @apiSampleRequest http://localhost:3000/books/:page
+ * @apiSampleRequest http://180.76.181.15:3000/books/:page
  * @apiDescription 分页古书籍列表
  * @apiName 分页古书籍列表
  * @apiGroup Books
@@ -71,7 +71,7 @@ router.get('/:page',function(req, res){
 
 /**
  * @api {get} /books/book_id/:book_id 根据book_id查询古书
- * @apiSampleRequest http://localhost:3000/books/book_id/:book_id
+ * @apiSampleRequest http://180.76.181.15:3000/books/book_id/:book_id
  * @apiDescription 根据book_id查询古书
  * @apiName 根据book_id查询古书
  * @apiGroup Books
