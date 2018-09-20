@@ -26,8 +26,8 @@
     "supervisor": "^0.12.0",
     "winston": "^3.0.0"
   },
-  "apidoc": {  
-    "title": "接口文档", 
+  "apidoc": {
+    "title": "接口文档",
     "url": "http://180.76.181.15:3000"
   }
 }
