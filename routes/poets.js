@@ -32,7 +32,7 @@ function responseAction(collectionName,query,req, res, skipnum,limitnum) {
 
 /**
  * @api {get} /poets/:page 诗人列表
- * @apiSampleRequest http://localhost:3000/poets/:page
+ * @apiSampleRequest http://180.76.181.15:3000/poets/:page
  * @apiDescription 诗人列表
  * @apiName 诗人列表
  * @apiGroup Poets
@@ -97,7 +97,7 @@ router.get('/:page',function(req, res){
 
 /**
  * @api {get} /poets/dynasty/:poet_dynasty/:page 以朝代查询诗人
- * @apiSampleRequest http://localhost:3000/poets/dynasty/:poet_dynasty/:page
+ * @apiSampleRequest http://180.76.181.15:3000/poets/dynasty/:poet_dynasty/:page
  * @apiDescription 以朝代查询诗人
  * @apiName 以朝代查询诗人
  * @apiGroup Poets
@@ -184,7 +184,7 @@ router.get('/dynasty/:poet_dynasty/:page',function(req, res){
 
 /**
  * @api {get} /poets/identifier/:poet_id 根据id查询诗人
- * @apiSampleRequest http://localhost:3000/poets/identifier/:poet_id
+ * @apiSampleRequest http://180.76.181.15:3000/poets/identifier/:poet_id
  * @apiDescription 根据id查询诗人
  * @apiName 根据id查询诗人
  * @apiGroup Poets
@@ -233,7 +233,7 @@ router.get('/identifier/:poet_id',function(req, res){
 
 /**
  * @api {get} /poets/name/:poet_name 根据名字查询诗人
- * @apiSampleRequest http://localhost:3000/poets/name/:poet_name
+ * @apiSampleRequest http://180.76.181.15:3000/poets/name/:poet_name
  * @apiDescription 根据名字查询诗人
  * @apiName 根据名字查询诗人
  * @apiGroup Poets

@@ -33,7 +33,7 @@ function responseAction(collectionName,query,req, res, skipnum,limitnum) {
 
 /**
  * @api {get} /poems/:page 古诗分页列表
- * @apiSampleRequest http://localhost:3000/poems/:page
+ * @apiSampleRequest http://180.76.181.15:3000/poems/:page
  * @apiDescription 古诗分页列表
  * @apiName 古诗分页列表
  * @apiGroup Poems
@@ -245,7 +245,7 @@ router.get('/:page',function(req, res){
 
 /**
  * @api {get} /poems/identifier/:poem_id 根据id查询诗词
- * @apiSampleRequest http://localhost:3000/poems/identifier/:poem_id
+ * @apiSampleRequest http://180.76.181.15:3000/poems/identifier/:poem_id
  * @apiDescription 根据id查询诗词
  * @apiName 根据id查询诗词
  * @apiGroup Poems
@@ -285,7 +285,7 @@ router.get('/identifier/:poem_id',function(req, res){
 
 /**
  * @api {get} /poems/name/:poem_title 根据题目名字查询诗词
- * @apiSampleRequest http://localhost:3000/poems/name/:poem_title
+ * @apiSampleRequest http://180.76.181.15:3000/poems/name/:poem_title
  * @apiDescription 根据题目名字查询诗词
  * @apiName 根据题目名字查询诗词
  * @apiGroup Poems
@@ -327,7 +327,7 @@ router.get('/name/:poem_title',function(req, res){
 
 /**
  * @api {get} /poems/tag/:poem_tags/:page 根据朝tag查询诗词
- * @apiSampleRequest http://localhost:3000/poems/tag/:poem_tags/:page
+ * @apiSampleRequest http://180.76.181.15:3000/poems/tag/:poem_tags/:page
  * @apiDescription 根据朝tag查询诗词
  * @apiName 根据朝tag查询诗词
  * @apiGroup Poems
@@ -422,7 +422,7 @@ router.get('/tag/:poem_tags/:page',function(req, res){
 
 /**
  * @api {get} /poems/author/:poem_author/:page 根据朝作者查询诗词
- * @apiSampleRequest http://localhost:3000/poems/author/:poem_author/:page
+ * @apiSampleRequest http://180.76.181.15:3000/poems/author/:poem_author/:page
  * @apiDescription 根据朝作者查询诗词
  * @apiName 根据朝作者查询诗词
  * @apiGroup Poems
@@ -510,7 +510,7 @@ router.get('/author/:poem_author/:page',function(req, res){
 
 /**
  * @api {get} /poems/dynasty/:poem_dynasty/:page 根据朝代查询诗词
- * @apiSampleRequest http://localhost:3000/poems/dynasty/:poem_dynasty/:page
+ * @apiSampleRequest http://180.76.181.15:3000/poems/dynasty/:poem_dynasty/:page
  * @apiDescription 根据朝代查询诗词
  * @apiName 根据朝代查询诗词
  * @apiGroup Poems

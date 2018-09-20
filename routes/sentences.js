@@ -19,7 +19,7 @@ function responseAction(query,req, res, pagenum,limitnum) {
 
 /**
  * @api {get} /sentences/:page 名句列表
- * @apiSampleRequest http://localhost:3000/sentences/:page
+ * @apiSampleRequest http://180.76.181.15:3000/sentences/:page
  * @apiDescription 名句列表
  * @apiName 名句列表
  * @apiGroup Sentences
@@ -128,7 +128,7 @@ router.get('/:page',function(req, res){
 
 /**
  * @api {get} /sentences/identifier/:sentence_id/type/:sentence_type 以id以及类型查询名句
- * @apiSampleRequest http://localhost:3000/sentences/identifier/:sentence_id/type/:sentence_type
+ * @apiSampleRequest http://180.76.181.15:3000/sentences/identifier/:sentence_id/type/:sentence_type
  * @apiDescription 以id以及类型查询名句
  * @apiName 以id以及类型查询名句
  * @apiGroup Sentences
@@ -160,7 +160,7 @@ router.get('/identifier/:sentence_id/type/:sentence_type',function(req, res){
 
 /**
  * @api {get} /sentences/identifier/:sentence_id 以id查询名句
- * @apiSampleRequest http://localhost:3000/sentences/identifier/:sentence_id
+ * @apiSampleRequest http://180.76.181.15:3000/sentences/identifier/:sentence_id
  * @apiDescription 以id查询名句
  * @apiName 以id查询名句
  * @apiGroup Sentences
@@ -200,7 +200,7 @@ router.get('/identifier/:sentence_id',function(req, res){
 
 /**
  * @api {get} /sentences/type/:sentence_type/:page 以类型查询名句
- * @apiSampleRequest http://localhost:3000/sentences/type/:sentence_type/:page
+ * @apiSampleRequest http://180.76.181.15:3000/sentences/type/:sentence_type/:page
  * @apiDescription 以类型查询名句
  * @apiName 以类型查询名句
  * @apiGroup Sentences
