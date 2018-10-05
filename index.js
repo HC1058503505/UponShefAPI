@@ -4,8 +4,8 @@ const app = express()
 const fs = require('fs')
 const http = require('http')
 const https = require('https')
-const privateKey = fs.readFileSync('./public/crtfiles/private.pem')
-const certficate = fs.readFileSync('./public/crtfiles/file.crt')
+const privateKey = fs.readFileSync('./public/crtfiles/2_houcong.win.key')
+const certficate = fs.readFileSync('./public/crtfiles/1_houcong.win_bundle.crt')
 const credentials = {'key': privateKey, 'cert': certficate}
 
 const indexRouter = require('./routes/index')
