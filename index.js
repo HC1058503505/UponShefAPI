@@ -1,6 +1,13 @@
 const path = require('path')
 const express = require('express')
 const app = express()
+const fs = require('fs')
+const http = require('http')
+const https = require('https')
+const privateKey = fs.readFileSync('./public/crtfiles/private.pem')
+const certficate = fs.readFileSync('./public/crtfiles/file.crt')
+const credentials = {'key': privateKey, 'cert': certficate}
+
 const indexRouter = require('./routes/index')
 const userRouter = require('./routes/users')
 const mealsRouter = require('./routes/meal')
@@ -41,9 +48,14 @@ app.use('/books',booksRouter)
 app.use('/sentences',sentencesRouter)
 
 
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
+var PORT = 18080;
+var SSLPORT = 18081;
 
-  console.log('Example app listening at http://%s:%s', host, port);
-})
+httpServer.listen(PORT, function() {
+    console.log('HTTP Server is running on: http://localhost:%s', PORT);
+});
+httpsServer.listen(SSLPORT, function() {
+    console.log('HTTPS Server is running on: https://localhost:%s', SSLPORT);
+});
